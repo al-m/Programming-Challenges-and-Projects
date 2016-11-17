@@ -83,10 +83,12 @@ def quick_sort(S):
 		return quick_sort(smaller)+equal+quick_sort(bigger)
 
 
+import sys
+sys.setrecursionlimit(2000)
 
 # testing the sorts, to 4 significant digits
 def test():
-	test_array = [randint(1,1e6) for i in range(500)]
+	test_array = [randint(1,1e6) for i in range(1500)]
 	t0 = time()
 	selection_sort(test_array)
 	t = time()-t0
